@@ -10,10 +10,7 @@ var bio = {
 		"location": "Brooklyn, NY"
 		},
 	"bioPic": "images/bioPic.jpg",
-	"welcomeMessage": "I work as a Web Producer for a cool non-profit organization that provides practical, nonpartisan advice and evidence-based, consensus-driven strategies to increase public safety and strengthen communities. I like to do a lot of other things in my spare time. Thanks for checking out my resume!",
-	"skills": ["Web Development", "Livestream Stuff", "Music"],
-
-
+	"welcomeMessage": "I work as a Web Producer for a cool non-profit organization that provides practical, nonpartisan advice and evidence-based, consensus-driven strategies to increase public safety and strengthen communities. I like to do a lot of other things such as write songs, play trivia with friends, and learn more about web development."
 }
 
 var work = {
@@ -23,7 +20,7 @@ var work = {
 		"employer": "CSG Justice Center",
 		"dates": "2013 - Present",
 		"location": "New York, NY",
-		"description": "I'm basically a code monkey.",
+		"description": "<ul class='body-ul'><li>HTML/CSS/JS/PHP development for organization's Wordpress website.</li><li>Integrating 3rd party frameworks (jQuery, raphael.js), APIs (Google Fusion Tables/Maps), and other emerging technologies with the organization’s website</li><li>Visualizing datasets via interactive maps and graphs</li><li>Managing developer/designers during site redesign as well as on-going maintenance projects</li><li>UI development from wireframes created in Photoshop</li></ul>",
 		"url": "http://csgjusticecenter.org"
 		},
 		{
@@ -31,7 +28,7 @@ var work = {
 		"employer": "NYPTI",
 		"dates": "2011-2013",
 		"location": "Albany, NY",
-		"description": "I helped people use their computers.",
+		"description": "<ul class='body-ul'><li>Developing and maintaining quarterly blog using Joomla CMS</li><li>Developing, testing, and debugging software applications in various programming languages (SQL, .aspx, HTML/CSS/JS)</li><li>Creating logos, instructional videos, and welcoming remarks videos for quarterly blog</li><li>Software training for users in person as well as via remote training (such as webinars)</li><li>Recording lectures and providing A/V support for presentations at various conferences</li></ul>",
 		"url": "http://nypti.org"
 		}
 	]
@@ -45,12 +42,19 @@ var education = {
 		"yearsAttended": "2007-2011",
 		"location": "1400 Washington Ave - Albany, NY",
 		"major": "Communications",
-		"minor": ["Mathematics", "Music"],
+		"minor": "Mathematics, Music",
 		"graduationYear": "2011",
 		"url": "http://albany.edu"
 		}
 	],
 	"onlineCourses": [
+		{
+			"title": "Front End Web Developer Nano-Degree",
+			"school": "Udacity",
+			"dates": "2015",
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+			"description": "Learn the fundamentals of how the web works and gain a working knowledge of the three foundational languages that power each and every website: HTML, CSS and JavaScript. This Nanodegree will provide a guided, efficient path for you to learn to build beautiful, responsive websites optimized for security and performance. You’ll see the efforts of your work with each click of the browser’s refresh button!"
+		},
 		{
 			"title": "Intro to HTML/CSS",
 			"school": "Udacity",
@@ -64,13 +68,6 @@ var education = {
 			"dates": "2015",
 			"url": "https://www.udacity.com/course/javascript-basics--ud804-nd",
 			"description": "In this course, you'll explore the JavaScript programming language by creating an interactive version of your résumé. You’ll learn the JavaScript programming fundamentals you need while building new elements and sections to enhance your résumé."
-		},
-		{
-			"title": "Front End Web Developer Nano-Degree",
-			"school": "Udacity",
-			"dates": "2015",
-			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
-			"description": "Learn the fundamentals of how the web works and gain a working knowledge of the three foundational languages that power each and every website: HTML, CSS and JavaScript. This Nanodegree will provide a guided, efficient path for you to learn to build beautiful, responsive websites optimized for security and performance. You’ll see the efforts of your work with each click of the browser’s refresh button!"
 		}
 	]
 }
@@ -78,25 +75,37 @@ var education = {
 var projects = {
 	"projects": [
 	{
+		"title": "Neighborhood Map (Work in Progress)",
+		"dates": "November 2015 - Present",
+		"description": "This application shows my favorite places to hang out in my neighborhood. Utilizes knockout.js, Google Maps JavaScript API, JQuery, and Bootstrap. I plan on adding other features such as Yelp reviews and a Google Street View of each location.",
+		"image": "images/neighborhoodMap.png",
+		"url": "http://jeggelke.github.io/neighborhood-map/"
+	},
+	{
+		"title": "Interactive Checklist for Juvenile Justice Agency Leaders and Managers",
+		"dates": "October 2015 - November 2015",
+		"description": "This private assessment helps agencies conduct a detailed assessment of how current policy and practice align with what research has shown works to reduce recidivism and improve other outcomes for youth involved with the juvenile justice system. Upon completion, a score is calculated and returned to the user. This project uses JQuery, Bootstrap, and saves to Local Storage after moving on to the next section.",
+		"image": "images/jj-checklist.png"
+	},
+	{
 		"title": "NCJI Map",
 		"dates": "May 2015 - June 2015",
 		"description": "This map pulls in data from a Fusion Table and plots it on a Google Map",
-		"image": "images/ncjiMap.png"
-	},
-	{
-		"title": "This Resume",
-		"dates": "July 2015",
-		"description": "This is my first online resume",
-		"image": ""
-	},
-	{
-		"title": "More to Come...",
-		"dates": "Present - The Future",
-		"description": "More projects forthcoming",
-		"image": ""
+		"image": "images/ncjiMap.png",
+		"url": "http://jeggelke.github.io/ncji/"
 	}
 	]
 }
+
+var skills = [
+		"HTML5/CSS3/JS",
+		"Using frameworks: JQuery, knockout.js, raphael.js, Bootstrap",
+		"Version control with git",
+		"APIs: Google Maps JavaScript API, Google Fusion Tables API, Wikipedia API",
+		"Video and audio for livestreams",
+		"Playing guitar, piano, and singing"
+	]
+
 
 bio.display = function(){
 	var formattedPic = HTMLbioPic.replace(data, bio.bioPic);
@@ -114,14 +123,18 @@ bio.display = function(){
 	$('#header').append(formattedPic, formattedMsg);
 	$('#topContacts').append(formattedLocation,formattedEmail,formattedGithub,formattedTwitter);
 	$('#footerContacts').append(formattedLocation,formattedEmail,formattedGithub,formattedTwitter);
-	if (bio.skills.length) {
-	$('#header').append(HTMLskillsStart);
-		for (var skill in bio.skills) {
-			var formattedSkill = HTMLskills.replace(data, bio.skills[skill]);
-			$('#skills').append(formattedSkill);
-		}
-	};
 };
+
+skills.display = function(){
+	var len = skills.length;
+	if (len) {
+		$('#skillz').append(HTMLskillsStart)
+		for (var i = 0; i < len; i++){
+					var formattedSkill = HTMLskills.replace(data, skills[i]);
+					$('#skills').append(formattedSkill);
+		}
+	}
+}
 
 work.display = function(){
 		var len = work.jobs.length;
@@ -146,6 +159,7 @@ projects.display = function(){
 	for (var i = 0; i < len; i++){
 		$('#projects').append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace(data, projects.projects[i].title);
+		if (projects.projects[i].url) {formattedTitle = formattedTitle.replace('#', projects.projects[i].url);}
 		$('.project-entry:last').append(formattedTitle);
 
 		var formattedDates = HTMLprojectDates.replace(data, projects.projects[i].dates);
@@ -155,6 +169,7 @@ projects.display = function(){
 		$('.project-entry:last').append(formattedDescription);
 
 		var formattedImage = HTMLprojectImage.replace(data, projects.projects[i].image);
+		if (projects.projects[i].url) {formattedImage = formattedImage.replace('#', projects.projects[i].url);}
 		$('.project-entry:last').append(formattedImage);
 	}
 	$('#nav').append(HTMLprojectsNav);
@@ -177,9 +192,12 @@ education.display = function(){
 
 		var formattedSchoolMajor = HTMLschoolMajor.replace(data, education.schools[i].major);
 		$('.education-entry:last').append(formattedSchoolMajor);
+
+		var formattedSchoolMinors = HTMLschoolMinors.replace(data, education.schools[i].minor);
+		$('.education-entry:last').append(formattedSchoolMinors);
 	}
 	$('#education').append(HTMLonlineClasses);
-	var len = education.onlineCourses.length;	
+	var len = education.onlineCourses.length;
 	for (var i = 0; i < len; i++) {
 		var formattedOnlineTitle = HTMLonlineTitle.replace(data, education.onlineCourses[i].title);
 		formattedOnlineTitle = formattedOnlineTitle.replace('#', education.onlineCourses[i].url);
@@ -197,6 +215,7 @@ education.display = function(){
 	$('#nav').append(HTMLeducationNav);
 };
 bio.display();
+skills.display();
 work.display();
 projects.display();
 education.display();
