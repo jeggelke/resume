@@ -78,14 +78,14 @@ var projects = {
 		"title": "Neighborhood Map (Work in Progress)",
 		"dates": "November 2015 - Present",
 		"description": "This application shows my favorite places to hang out in my neighborhood. Utilizes knockout.js, Google Maps JavaScript API, JQuery, and Bootstrap. I plan on adding other features such as Yelp reviews and a Google Street View of each location.",
-		"image": "images/neighborhoodMap.png",
+		"image": "images/neighborhoodMap-resized.png",
 		"url": "http://jeggelke.github.io/neighborhood-map/"
 	},
 	{
 		"title": "Interactive Checklist for Juvenile Justice Agency Leaders and Managers",
 		"dates": "October 2015 - November 2015",
 		"description": "This private assessment helps agencies conduct a detailed assessment of how current policy and practice align with what research has shown works to reduce recidivism and improve other outcomes for youth involved with the juvenile justice system. Upon completion, a score is calculated and returned to the user. This project uses JQuery, Bootstrap, and saves to Local Storage after moving on to the next section.",
-		"image": "images/jj-checklist.png"
+		"image": "images/jj-checklist-resized.png"
 	},
 	{
 		"title": "NCJI Map",
