@@ -1,22 +1,27 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
+}
+
+body {
+	min-width: 450px;
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #fff;
   line-height: 48px;
+  font-weight: 500;
   display: inline;
 }
 
@@ -79,24 +84,33 @@ a {
   display: block;
 }
 
+.contact-link{
+	display: inline;
+	margin: 0px;
+	color: #fff;	
+}
+
 .welcome-message {
-  font-style: italic;
+
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
 }
 
-#skillsH3 {
+.skills-h3 {
   color: #F5AE23;
-  display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #ffa640;
+}
+
+.blue {
+	background-color: #4099FF;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #ffa640;
 }
 
 .white-text {
@@ -116,7 +130,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #4A4A4A;
 }
 
 .flex-box {
@@ -141,8 +155,8 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  padding: 5px 10px 10px;
+  height: 300px;
   display: none;
 }
 
@@ -170,6 +184,29 @@ span {
   text-align: center;
 }
 
+#name-title-nav{	
+	height: 90px;
+	padding: 30px 64px;
+}
+
+#nav a{
+	color: #fff
+	}
+#nav {
+	clear: both;
+}
+#nav li {
+	float: left;
+	padding: 10px 15px;
+}	
+#nav li:first-child {
+	padding-left: 0px;
+}
+
+#nav li:last-child {
+	padding-right: 0px;
+}
+
 @media only screen and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
@@ -178,7 +215,7 @@ span {
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
+    height: 250px;
   }
 }
 
@@ -187,11 +224,26 @@ span {
     margin-top: 10%;
   }
   .biopic {
-    width: 150px;
+    height: 200px;
   }
   .welcome-message {
     display: none;
+  }  
+
+}
+@media only screen and (max-width: 510px) {
+#role {
+  float: left;
+  min-width: 100%;
+  padding-bottom: 0px;
   }
+#name-title-nav{	
+  text-align: center;
+  } 
+nav{
+	margin-left: auto;
+	margin-right: auto;
+}   
 }
 
 #map {
@@ -208,8 +260,21 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
-  .biopic {
-    display: block;
+  #skillsH3 {
+	  display: block;
   }
+  .biopic {
+  display: -webkit-flex;
+  display: flex;
+  }
+
 }
+
+.flex-item{
+	height: 20px;
+}
+
+.project-img {
+	max-width:30%;
+}
+
