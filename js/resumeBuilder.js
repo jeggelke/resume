@@ -101,7 +101,7 @@ var skills = [
 		"HTML5/CSS3/JS",
 		"Using frameworks: JQuery, knockout.js, raphael.js, Bootstrap",
 		"Version control with git",
-		"APIs: Google Maps JavaScript API, Google Fusion Tables API, Wikipedia API",
+		"APIs: Google Maps JavaScript API, Google Fusion Tables API, Wikipedia API, YouTube API, just to name a few",
 		"Video and audio for livestreams",
 		"Playing guitar, piano, and singing"
 	]
