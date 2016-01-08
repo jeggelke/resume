@@ -85,7 +85,15 @@ var projects = {
 		"title": "Interactive Checklist for Juvenile Justice Agency Leaders and Managers",
 		"dates": "October 2015 - November 2015",
 		"description": "This private assessment helps agencies conduct a detailed assessment of how current policy and practice align with what research has shown works to reduce recidivism and improve other outcomes for youth involved with the juvenile justice system. Upon completion, a score is calculated and returned to the user. This project uses JQuery, Bootstrap, and saves to Local Storage after moving on to the next section.",
-		"image": "images/jj-checklist-resized.png"
+		"image": "images/jj-checklist-resized.png",
+		"url": "http://jeggelke.github.io/checklist/index.html"
+	},
+	{
+		"title": "Stepping Up Initiative Microsite",
+		"dates": "February 2015 - July 2015",
+		"description": "This call to action microsite is the home of a national initiative led by The Council of State Governments Justice Center, the National Association of Counties, and the American Psychiatric Association Foundation. The purpose of this initiative is to reduce the number of people with mental illness in jails and prisons. This site was built with Wordpress, uses JQuery and Bootstrap, and is fully responsive across browsers and devices.",
+		"image": "images/steppingUp.png",
+		"url": "http://jeggelke.github.io/resume/index.html"
 	},
 	{
 		"title": "NCJI Map",
